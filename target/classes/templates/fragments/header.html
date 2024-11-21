@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:fragment="head">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../static/css/style.css"
+      th:href="@{/css/style.css}"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header th:fragment="header">
+      <div class="jumbotron">      
+        <div class="row text-center">
+          <div class="bottom mt-3 nyn23jhsd">
+            <p class="card-mark">              
+              <img
+                src="../../static/images/boot.png"              
+                th:src="@{/images/logo_m.svg}"
+                alt="세종사이버대학교"
+                />
+            </p>
+            <div class="card-img-wrap">
+              <img
+                src="../../static/images/default_user.png"              
+                th:src="@{/images/default_user.png}"
+                alt="프로필사진"
+              />
+            </div>
+            <p class="card-user-name">오준석</p>
+            <p class="mb5">21933164</p>
+            <p class="mb20">IT학부 <br />소프트웨어공학과</p>
+          </div>         
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
