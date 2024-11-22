@@ -12,20 +12,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header th:fragment="header">
-      <div class="jumbotron">      
+    <header class="bg-gray-800 text-white text-center p-4" th:fragment="header">
+      <div class="jumbotron">
         <div class="row text-center">
           <div class="bottom mt-3 nyn23jhsd">
-            <p class="card-mark">              
+            <p class="card-mark">
               <img
-                src="../../static/images/boot.png"              
+                src="../../static/images/boot.png"
                 th:src="@{/images/logo_m.svg}"
                 alt="세종사이버대학교"
-                />
+              />
             </p>
             <div class="card-img-wrap">
               <img
-                src="../../static/images/default_user.png"              
+                src="../../static/images/default_user.png"
                 th:src="@{/images/default_user.png}"
                 alt="프로필사진"
               />
@@ -33,9 +33,24 @@
             <p class="card-user-name">오준석</p>
             <p class="mb5">21933164</p>
             <p class="mb20">IT학부 <br />소프트웨어공학과</p>
-          </div>         
+          </div>
         </div>
       </div>
     </header>
+    <section th:fragment="nav">
+      <nav class="bg-blue-600 p-4 shadow-lg">
+        <ul class="flex space-x-4">
+          <li><a href="/" class="text-white font-semibold">Home</a></li>
+          <li>
+            <a href="/users/userList" class="text-white font-semibold"
+              >User List</a
+            >
+          </li>
+          <li>
+            <a href="/users/new" class="text-white font-semibold">Add User</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
   </body>
 </html>

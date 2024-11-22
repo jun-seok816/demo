@@ -19,16 +19,15 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0.4em;
-  border-radius: 0px 0px 8px 8px;
+  padding: 1em 0.2em;
   box-sizing: border-box;
-  background-color: #fff;
 }
 
 .nyn23jhsd {
-    border-radius: 5px;
-    background: #ffffff;
-    box-shadow: -1px 7px 10px #d9d9d9, -20px -20px 10px #ffffff;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 2px 8px 10px #1a232f, -20px -20px 10px #242f3f;
+  color: black;
 }
 
 .card-mark {

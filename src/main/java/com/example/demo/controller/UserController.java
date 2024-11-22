@@ -25,7 +25,7 @@ public class UserController {
     }
 
     // 모든 사용자 조회
-    @GetMapping
+    @GetMapping("/userList")
     public List<User> listAllUsers() {
         return userService.listAllUsers();
     }
