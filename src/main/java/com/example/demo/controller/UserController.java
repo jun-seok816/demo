@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,12 +20,6 @@ public class UserController {
     @PostMapping("/new")
     public User createUser(@RequestBody User user) {
         return userService.saveUser(user);
-    }
-
-    // 모든 사용자 조회
-    @GetMapping("/userList")
-    public List<User> listAllUsers() {
-        return userService.listAllUsers();
     }
 
     // 이름으로 사용자 조회

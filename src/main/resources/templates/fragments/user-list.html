@@ -1,12 +1,7 @@
 <section th:fragment="user-list">
   <div class="flex justify-between items-center mb-4">
     <h2 class="text-xl font-bold">User List</h2>
-    <a
-      href="#create-user"
-      class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-    >
-      Create User
-    </a>
+
   </div>
   <table class="table-auto w-full bg-white rounded shadow">
     <thead>
@@ -21,10 +16,10 @@
       <tr th:each="user : ${users}" class="border-t">
         <td class="px-4 py-2" th:text="${user.id}"></td>
         <td class="px-4 py-2" th:text="${user.name}"></td>
-        <td class="px-4 py-2" th:text="${user.email}"></td>
+        <td class="px-4 py-2" th:text="${user.email}"></td>        
         <td class="p-3">
           <a
-            href="#edit-user"
+            id="edit-user-btn"
             class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600"
             >Edit</a
           >

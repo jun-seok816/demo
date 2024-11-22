@@ -13,6 +13,7 @@ public class User {
 
     private String name; // 테이블의 'name' 컬럼
     private String email; // 테이블의 'email' 컬럼
+    private Long departments_key;//테이블의 'departments_key' 컬럼
 
     // 기본 생성자
     public User() {}
@@ -40,5 +41,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void departments_key(Long departments_key){
+        this.departments_key = departments_key;
+    }
+
+    public Long setDepartments_key(){
+        return departments_key;
     }
 }
