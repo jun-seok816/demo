@@ -9,6 +9,7 @@
         <th class="p-3">ID</th>
         <th class="p-3">Name</th>
         <th class="p-3">Email</th>
+        <th class="p-3">departments</th>
         <th class="p-3">Actions</th>
       </tr>
     </thead>
@@ -16,7 +17,8 @@
       <tr th:each="user : ${users}" class="border-t">
         <td class="px-4 py-2" th:text="${user.id}"></td>
         <td class="px-4 py-2" th:text="${user.name}"></td>
-        <td class="px-4 py-2" th:text="${user.email}"></td>        
+        <td class="px-4 py-2" th:text="${user.email}"></td>       
+        <td class="px-4 py-2" th:text="${user.department.name}"></td>                
         <td class="p-3">
           <a
             id="edit-user-btn"
