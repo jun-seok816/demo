@@ -96,6 +96,7 @@ Spring Boot, JPA, 그리고 Thymeleaf를 활용하여 구현한 사용자 관리
 
 - **User List 스크린샷:**
   https://github.com/user-attachments/assets/7db0e47b-45f5-4b39-9fb3-b465a8ab8c40
+  ![2024-11-25-14-42-01](https://github.com/user-attachments/assets/0f4acfcd-374b-4d2c-a6d2-35351d48c8ca)
 
 - **Edit User Modal 스크린샷:**
   https://github.com/user-attachments/assets/d6232053-0391-450f-9f10-d46c2e23121f
