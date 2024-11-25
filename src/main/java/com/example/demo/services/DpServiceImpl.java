@@ -17,4 +17,10 @@ public class DpServiceImpl implements DpService {
     public List<Departments> listAllDepartments(){
         return dpPepository.findAll();
     }
+
+    @Override
+    public Departments getDpById(Long id){
+        return dpPepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Department not found"));
+    }
 }

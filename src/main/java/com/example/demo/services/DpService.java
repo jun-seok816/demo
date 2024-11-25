@@ -13,4 +13,11 @@ public interface DpService {
      * @return     
      */
     List<Departments> listAllDepartments();
+
+    /**
+     * 사용자의 Pk를 가져옴
+     * @param id PK
+     * @return 
+     */
+    Departments getDpById(Long id);
 }

@@ -1,7 +1,6 @@
 <section th:fragment="user-list">
   <div class="flex justify-between items-center mb-4">
     <h2 class="text-xl font-bold">User List</h2>
-
   </div>
   <table class="table-auto w-full bg-white rounded shadow">
     <thead>
@@ -17,8 +16,8 @@
       <tr th:each="user : ${users}" class="border-t">
         <td class="px-4 py-2" th:text="${user.id}"></td>
         <td class="px-4 py-2" th:text="${user.name}"></td>
-        <td class="px-4 py-2" th:text="${user.email}"></td>       
-        <td class="px-4 py-2" th:text="${user.department.name}"></td>                
+        <td class="px-4 py-2" th:text="${user.email}"></td>
+        <td class="px-4 py-2" th:text="${user.department.name}"></td>
         <td class="p-3">
           <a
             id="edit-user-btn"
@@ -26,10 +25,12 @@
             >Edit</a
           >
           <a
-            href="#delete-user"
+            href="#"
+            th:attr="onclick=|deleteUser('${user.id}')|"
             class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
-            >Delete</a
           >
+            Delete
+          </a>
         </td>
       </tr>
       <!-- More rows can be dynamically added here -->

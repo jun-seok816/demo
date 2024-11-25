@@ -34,3 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
     editUserModal.classList.remove("flex");
   });
 });
+
+
+/**
+ * 
+ * @param {Long} userId 
+ * 사용자 삭제
+ */
+function deleteUser(userId) {
+  if (confirm(`사용자를 삭제 하겠습니까?`)) {
+    axios
+      .delete(`/users/${userId}`)
+      .then(response => {
+        alert(response.data); // 서버에서 반환한 메시지 표시
+        location.reload(); // 페이지 새로고침 (필요에 따라 DOM 수정 가능)
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Failed to delete user. Please try again.");
+      });
+  }
+}
