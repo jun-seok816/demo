@@ -1,9 +1,17 @@
 package com.example.demo.dto;
 
 public class UserDTO {
+    private Long id; // 사용자 ID
     private String name;
     private String email;
     private String department; // 필드 이름은 "department"로 유지
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     // Getters and Setters
     public String getName() {

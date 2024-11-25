@@ -40,6 +40,28 @@ public class UserController {
         return "<script>window.location.href='/'</script>";
     }
 
+    @PostMapping("/update")
+    public String updateUser(@RequestBody UserDTO userDTO) {
+        // 기존 사용자 조회
+        User user = userService.getUserById(userDTO.getId());
+        if (user == null) {
+            // 사용자 없음 처리
+            return "<script>alert('User not found'); window.location.href='/';</script>";
+        }
+
+        // 사용자 정보 업데이트
+        user.setName(userDTO.getName());
+        user.setEmail(userDTO.getEmail());
+
+        Long departmentId = Long.parseLong(userDTO.getDepartment());
+        Departments dp = dpService.getDpById(departmentId);
+        user.setDepartment(dp);
+
+        // 업데이트 저장
+        userService.saveUser(user);        
+        return "good";
+    }
+
     // 이름으로 사용자 조회
     @GetMapping("/{name}")
     public User getUserByName(@PathVariable String name) {

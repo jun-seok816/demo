@@ -13,15 +13,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr th:each="user : ${users}" class="border-t">
+      <tr th:each="user : ${users}" class="border-t user-item">
         <td class="px-4 py-2" th:text="${user.id}"></td>
         <td class="px-4 py-2" th:text="${user.name}"></td>
         <td class="px-4 py-2" th:text="${user.email}"></td>
         <td class="px-4 py-2" th:text="${user.department.name}"></td>
         <td class="p-3">
           <a
-            id="edit-user-btn"
-            class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600"
+            th:attr="data-user-id=${user.id}, 
+            data-user-name=${user.name}, 
+            data-user-email=${user.email}, 
+            data-user-department=${user.department.id}"
+            onclick="openEditUserModalFromElement(this)"
+            class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 edit-user-btn"
             >Edit</a
           >
           <a
